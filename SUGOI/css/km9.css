@@ -1,0 +1,124 @@
+body{
+	background-image:url('../imgs/giphy.gif');
+}
+a{
+	text-decoration:none;
+}
+button {
+     background:none!important;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     /*border is optional*/
+     border-bottom:1px solid #444; 
+     cursor: pointer;
+}
+#wrapDiv{
+	margin-left:auto;
+	margin-right:auto;
+	width:800px;
+	height:900px;
+	background-color:rgba(63, 63, 191, 0.75);
+	border:solid black;
+	margin-bottom:300px;
+
+}
+#headDiv{
+	height:100px;
+	background-color:red;
+	vertical-align: bottom;
+	position:relative;
+}
+#headDiv-content{
+	position:relative;
+	bottom:0;
+	font-family:Monospace;
+	font-weight: bold;
+	font-size: 25px;
+	color:yellow;
+
+}
+#navDiv{
+	height:50px;
+	text-align:center;
+	background-color:purple;
+	border-top:solid black;
+	border-bottom:solid black;
+}
+#bodyDiv{
+
+}
+#footDiv{
+
+}
+.butDiv{
+	background-color:yellow;
+	display:inline;
+	height:20px;
+	width:150px;
+	margin:25px;
+	position:relative;
+	top: 25%;
+	border:solid black;
+	font-family:Monospace;
+	text-align:center;
+	font-size:15pt;
+}
+a:hover{
+	font-weight: bold;
+	color:#7fc7af;
+}
+#kanye_glasses{
+	left:42%;
+	top:40%;
+	z-index: -1000;
+	width:300px;
+	
+}
+#kanye_happy{
+	width:150px;
+	left:90%;
+	top:20%;
+	z-index: 1000;
+}
+#kanye_surprised{
+	width:150px;
+	left:10%;
+	top:20%;
+	z-index: 1000;
+}
+.image{
+	position:absolute;
+	margin:-60px 0 0 -60px;
+	-webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+
+}
+.utube{
+	margin:15px
+}
+.desc{
+	font-family:Monospace;
+	float:right;
+	padding-top:15px;
+	color:lightgreen;
+	font-size:14px;
+	background-color:rgba(0,235,98,0.5);
+	border-radius:10px;
+	width:400px;
+	height:200px;
+	right:30px;
+	top:15px;
+	position:relative;
+}
+.cont{
+	color:lightblue;
+	font-size: 25px;
+	text-align:center;
+	font-family:Monospace;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
