@@ -8,9 +8,10 @@ public class Mario{
     loc = new PVector();
     vel = new PVector();
     acc = new PVector(1.3, 1.3);
-    marioSprite = loadImage("Sprites/small_players.png");
+    marioSprite = loadImage("Sprites/smallPlayers.png");
     smallSprites = new PImage[marioSprite.height/16][marioSprite.width/19];
     loadArray();
+    display();
   }
   
   public boolean isMoving(){
@@ -51,14 +52,20 @@ public class Mario{
   }
   
   public void loadArray(){
-    PImage player = createImage(19, 16, ARGB);
+    
     for(int i = 0; i < smallSprites.length; i++){
       for(int j = 0; j < smallSprites[i].length; j++){
+        PImage player = createImage(19, 16, ARGB);
         smallSprites[i][j] = new PImage();
-        println(smallSprites[i][j]);
-        smallSprites[i][j] = player.copy(marioSprite, j*19, i*16, 16, 19, 0, 0, 19, 16); 
+        player.copy(marioSprite, j*19, i*16, 19, 16, 0, 0, 19, 16);
+        smallSprites[i][j] = player; 
       }
     }
+  }
+  
+  public void display(){
+    handleKeys();
+    image(smallSprites[1][0], width/2, height/2);
   }
     
 }
