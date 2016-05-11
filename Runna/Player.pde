@@ -10,8 +10,7 @@ public class Mario{
     acc = new PVector(1.3, 1.3);
     marioSprite = loadImage("Sprites/smallPlayers.png");
     smallSprites = new PImage[marioSprite.height/16][marioSprite.width/19];
-    loadArray();
-    display();
+    runMario();
   }
   
   public boolean isMoving(){
@@ -47,8 +46,9 @@ public class Mario{
     }
   }
   
-  public void run(){
-    
+  public void runMario(){
+    loadArray();
+    display();
   }
   
   public void loadArray(){
@@ -65,7 +65,7 @@ public class Mario{
   
   public void display(){
     handleKeys();
-    image(smallSprites[1][0], width/2, height/2);
+    image(smallSprites[0][0], width/2, height/2);
   }
     
 }
