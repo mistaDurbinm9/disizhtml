@@ -6,6 +6,8 @@ public void setup(){
 }
 
 public void draw(){
+  background(#5E92FF);
   m = new Mario();
 }
+
 
