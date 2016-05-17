@@ -1,59 +1,51 @@
 public class Mario {
 
-  private PVector loc, vel, acc, grav;
+  private PVector loc, vel, grav, acc;
   private PImage marioSprite;
   private PImage[][] smallSprites;
 
   public Mario() {
     loc = new PVector(0, 0);
     vel = new PVector(0, 0);
+    grav = new PVector(0, 0);
     acc = new PVector(1.3, 1.3);
-    grav = new PVector(0, 0.3);
     marioSprite = loadImage("Sprites/smallPlayers.png");
     smallSprites = new PImage[marioSprite.height/16][marioSprite.width/19];
     runMario();
-    println("x: " + loc.x + " y: " + loc.y);
   }
 
   public void runMario() {
     loadArray();
-    display(loc.x, loc.y);
+    display((int)loc.x, (int)loc.y);
+    update();
   }
 
-  private boolean isMoving() {
-    if (vel.x != 0 || vel.y != 0)
-      return true;
-
-    return false;
-  } 
-
   public void handleKeys() {
-    if (key == CODED) {
-      if (key == UP) {
-        //jump();
-      }
-      if (key == DOWN) {
-        //crouch();
-      }
-      if (key == LEFT) {
-        walk("left");
-      }
-      if (key == RIGHT) {
-        walk("right");
-        println("lol");
+    if (keyPressed) {
+      if (key == CODED) {
+        if (keyCode == UP) {
+          //m.jump();
+        }
+        if (keyCode == DOWN) {
+          //m.crouch();
+        }
+        if (keyCode == LEFT) {
+          m.walk("left");
+        }
+        if (keyCode == RIGHT) {
+          m.walk("right");
+        }
       }
     }
   }
 
-
-
   public void walk(String direction) {
     if (direction.equals("right")) {
-      vel.x += acc.x;
-      vel.limit(3);
-      for (int i = 0; i < 3; i++) {
-        display(0, i);
-      }
+      vel.x *= acc.x;
+      display(0, 0);
+      /*for (int i = 0; i < 3; i++) {
+       display(0, i);
+       }*/
     }
   }
 
@@ -71,13 +63,19 @@ public class Mario {
 
   public void display(int r, int c) {
     handleKeys();
-    image(smallSprites[r][c], 0, 0);
+    image(smallSprites[r][c], loc.x, loc.y);
   }
 
   public void update() {
-    vel.y += grav.y;
     vel.add(acc);
     loc.add(vel);
+    vel.limit(3);
+  }
+
+  private boolean isMoving() {
+    if (vel.x != 0 || vel.y != 0)
+      return true;
+
+    return false;
   }
 }
-
