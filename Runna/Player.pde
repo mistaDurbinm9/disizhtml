@@ -1,4 +1,4 @@
-public class Mario {
+public class Mario{
 
   private PVector loc, vel, grav, acc;
   private PImage marioSprite;
@@ -19,26 +19,7 @@ public class Mario {
     display((int)loc.x, (int)loc.y);
     update();
   }
-
-  public void handleKeys() {
-    if (keyPressed) {
-      if (key == CODED) {
-        if (keyCode == UP) {
-          //m.jump();
-        }
-        if (keyCode == DOWN) {
-          //m.crouch();
-        }
-        if (keyCode == LEFT) {
-          m.walk("left");
-        }
-        if (keyCode == RIGHT) {
-          m.walk("right");
-        }
-      }
-    }
-  }
-
+  
   public void walk(String direction) {
     if (direction.equals("right")) {
       vel.x *= acc.x;
@@ -78,4 +59,5 @@ public class Mario {
 
     return false;
   }
+}
 }

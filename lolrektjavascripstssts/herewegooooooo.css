@@ -1,0 +1,39 @@
+body{
+  background-color: #000;
+}
+#top{
+  color:#fff;
+  margin:auto;
+  text-align: center;
+}
+
+#rap{
+  background-color: #662277;
+  width:350px;
+  height:550px;
+  margin: auto;
+  margin-top:100px;
+  border: 2px solid black;
+  border-radius:25px;
+  text-align: center;
+}
+
+#in{
+  background-color: #660000;
+  width:300px;
+  height:200px;
+  margin:auto;
+  margin-top:25px;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+#out{
+  background-color: #660000;
+  width:300px;
+  height:200px;
+  margin:auto;
+  margin-top:80px;
+  border: 2px solid black;
+  border-radius: 25px;
+}
