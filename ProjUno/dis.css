@@ -1,0 +1,34 @@
+html{
+  size:100%;
+}
+body{
+  font-family: monospace;
+  font-size: 15pt;
+}
+#con{
+  margin:auto;
+}
+#head{
+  margin:inherit;
+  background-color: red;
+  width:750px;
+  height: 50px
+}
+#nav{
+}
+.but{
+  display: inline-block;
+  width:125px;
+  height:50px;
+  background-color: blue;
+}
+#bod{
+  background-color: purple;
+  width:750px;
+  height: 900px;
+}
+#foot{
+  background-color: green;
+  width:750px;
+  height:100px;
+}
