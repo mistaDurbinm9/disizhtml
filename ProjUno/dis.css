@@ -5,6 +5,10 @@ body{
   font-family: monospace;
   font-size: 15pt;
 }
+a{
+  text-decoration: none;
+  color:inherit;
+}
 #con{
   margin:auto;
 }

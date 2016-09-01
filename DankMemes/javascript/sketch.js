@@ -2,7 +2,7 @@ var boids = [];
 var maxBoids = 50;
 
 function setup() {
-	var myCanvas = createCanvas(displayWidth, displayHeight);
+	var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
 	background(21, 3, 77, 0);
 	loadBoids(maxBoids);
   myCanvas.position(0,0);
@@ -20,7 +20,7 @@ function loadBoids(mb){
 }
 
 function runBoids(){
-	//  Load my array with boids
+	//  run my array with boids
 	for(var i = 0; i < maxBoids; i++){
 	  boids[i].run();
 	}
