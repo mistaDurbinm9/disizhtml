@@ -3,8 +3,6 @@ var scl = 40;
 
 var food;
 
-var img;
-var img2;
 var bg;
 var rock;
 
@@ -126,9 +124,11 @@ function Snake() {
   this.show = function() {
     fill(255);
     for (var i = 0; i < this.tail.length; i++) {
-      image(img2, this.tail[i].x, this.tail[i].y, scl, scl);
+      textSize(22);
+      text("FOOD", this.tail[i].x, this.tail[i].y);
     }
-    image(img2, this.x, this.y, scl, scl);
+    textSize(22);
+    text("FOOD", this.x, this.y);
 
   }
 }
